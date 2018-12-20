@@ -1,0 +1,8 @@
+E:\大学\dotNet\homework\登录游戏大厅\bin\Release\登录游戏大厅.exe
+E:\大学\dotNet\homework\登录游戏大厅\bin\Release\登录游戏大厅.pdb
+E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Release\ResolveAssemblyReference.cache
+E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Release\登录游戏大厅.Properties.Resources.resources
+E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Release\GenerateResource.read.1.tlog
+E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Release\GenerateResource.write.1.tlog
+E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Release\登录游戏大厅.exe
+E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Release\登录游戏大厅.pdb

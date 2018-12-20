@@ -1,0 +1,29 @@
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\bin\Debug\猜数字.exe
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\bin\Debug\猜数字.pdb
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\obj\x86\Debug\猜数字.Form1.resources
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\obj\x86\Debug\猜数字.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\obj\x86\Debug\猜数字.exe
+C:\Documents and Settings\Administrator\桌面\21\猜数字\猜数字\obj\x86\Debug\猜数字.pdb
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\obj\x86\Debug\猜数字.exe
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\obj\x86\Debug\猜数字.pdb
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\obj\x86\Debug\猜数字.Form1.resources
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\obj\x86\Debug\猜数字.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\bin\Debug\猜数字.exe
+C:\Documents and Settings\Administrator\桌面\猜数字\猜数字\bin\Debug\猜数字.pdb
+E:\大学\dotNet\猜数字\猜数字\obj\x86\Debug\猜数字.exe
+E:\大学\dotNet\猜数字\猜数字\obj\x86\Debug\猜数字.pdb
+E:\大学\dotNet\homework\猜数字\obj\x86\Debug\猜数字.exe
+E:\大学\dotNet\homework\猜数字\obj\x86\Debug\猜数字.pdb
+E:\大学\dotNet\homework\猜数字\bin\Debug\猜数字.exe
+E:\大学\dotNet\homework\猜数字\bin\Debug\猜数字.pdb
+E:\大学\dotNet\homework\猜数字\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\大学\dotNet\homework\猜数字\obj\x86\Debug\猜数字.Form1.resources
+E:\大学\dotNet\homework\猜数字\obj\x86\Debug\猜数字.Properties.Resources.resources
+E:\大学\dotNet\homework\猜数字\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\大学\dotNet\homework\猜数字\obj\x86\Debug\GenerateResource.write.1.tlog

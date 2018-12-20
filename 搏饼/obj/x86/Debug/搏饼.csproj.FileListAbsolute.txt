@@ -1,0 +1,18 @@
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\bin\Debug\搏饼.exe
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\bin\Debug\搏饼.pdb
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\obj\x86\Debug\搏饼.Form1.resources
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\obj\x86\Debug\搏饼.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\obj\x86\Debug\搏饼.exe
+C:\Documents and Settings\Administrator\桌面\搏饼\搏饼\obj\x86\Debug\搏饼.pdb
+E:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.exe
+E:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.pdb
+E:\大学\dotNet\homework\搏饼\bin\Debug\搏饼.exe
+E:\大学\dotNet\homework\搏饼\bin\Debug\搏饼.pdb
+E:\大学\dotNet\homework\搏饼\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.Form1.resources
+E:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.Properties.Resources.resources
+E:\大学\dotNet\homework\搏饼\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\大学\dotNet\homework\搏饼\obj\x86\Debug\GenerateResource.write.1.tlog
