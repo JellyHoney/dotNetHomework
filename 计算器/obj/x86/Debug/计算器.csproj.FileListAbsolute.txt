@@ -36,10 +36,10 @@ E:\大学\dotNet\homework\计算器\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\大学\dotNet\homework\计算器\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\大学\dotNet\homework\计算器\bin\Debug\计算器.exe
 D:\大学\dotNet\homework\计算器\bin\Debug\计算器.pdb
-D:\大学\dotNet\homework\计算器\obj\x86\Debug\计算器.csprojAssemblyReference.cache
+D:\大学\dotNet\homework\计算器\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\大学\dotNet\homework\计算器\obj\x86\Debug\计算器.Form1.resources
 D:\大学\dotNet\homework\计算器\obj\x86\Debug\计算器.Properties.Resources.resources
-D:\大学\dotNet\homework\计算器\obj\x86\Debug\计算器.csproj.GenerateResource.cache
-D:\大学\dotNet\homework\计算器\obj\x86\Debug\计算器.csproj.CoreCompileInputs.cache
+D:\大学\dotNet\homework\计算器\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\大学\dotNet\homework\计算器\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\大学\dotNet\homework\计算器\obj\x86\Debug\计算器.exe
 D:\大学\dotNet\homework\计算器\obj\x86\Debug\计算器.pdb

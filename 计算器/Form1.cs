@@ -13,6 +13,7 @@ namespace 计算器
     {
         String oldString = "";
         String newString = "";
+        String opString = "";
         public Form1()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@ namespace 计算器
             }
             return res;
         }
-        private int Calc(int a,int b,int op)
+        private int Calc(int a,int b,char op)
         {
             if(op=='+')
             {
@@ -77,6 +78,7 @@ namespace 计算器
             int[] ops=new int[N];
             char[] opv=new char[N];
             int topOps=0,topOpv=0;
+            s = '0' + s;
             s += '#';
             for (int i = 0; i < s.Length; ++i)
             {
@@ -88,7 +90,7 @@ namespace 计算器
                 {
                     ops[++topOps]=opnum;
                     opnum = 0;
-                    while(topOpv>0&&level(s[i])<level(opv[topOpv]))
+                    while(topOpv>0&&level(s[i])<=level(opv[topOpv]))
                     {
                         ops[topOps - 1] = Calc(ops[topOps - 1], ops[topOps], opv[topOpv]);
                         topOps--;
@@ -102,26 +104,35 @@ namespace 计算器
 
         private void Equal()
         {
-            textBox1.Text = textBox1.Text + "=" + Environment.NewLine + CalcExpression(textBox1.Text);
+            oldString += newString;
+            newString = "";
+            opString = "";
+            newString = CalcExpression(oldString);
+            textBox1.Text = oldString + "=" + Environment.NewLine + newString;
+            oldString = "";
         }
-
+        private void NumOp(string Num)
+        {
+            oldString += opString;
+            opString = "";
+            newString += Num;
+            textBox1.Text = oldString + Environment.NewLine + newString;
+        }
+        private void OpOp(string op)
+        {
+            oldString += newString;
+            opString = op;
+            newString = "";
+            textBox1.Text = oldString + opString + Environment.NewLine + newString;
+        }
         private void buttonNumClick(object sender, EventArgs e)
         {
-            newString += ((Button)sender).Name;
-            textBox1.Text = oldString + Environment.NewLine + newString;
-        //    textBox1.Text += ((Button)sender).Name;
+            NumOp(((Button)sender).Name);
         }
         private void buttonOpClick(object sender, EventArgs e)
         {
-            newString += ((Button)sender).Name;
-            textBox1.Text = oldString + Environment.NewLine + newString;
-            if (newString.Length > 1)
-            {
-                oldString = oldString + newString;
-                newString = "";
-            }
+            OpOp(((Button)sender).Name);
         }
-
         private void buttonEqualClick(object sender, EventArgs e)
         {
             Equal();
@@ -141,21 +152,21 @@ namespace 计算器
             textBox1.Text = "";
             oldString = "";
             newString = "";
+            opString = "";
         }
         
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
+            /*
             switch (e.KeyCode)
             {
                 case Keys.Enter:
                     Equal();
                     break;
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+                case Keys.NumPad0:
+                    NumOp("0");
+                    break;
+            }*/
         }
     }
 }

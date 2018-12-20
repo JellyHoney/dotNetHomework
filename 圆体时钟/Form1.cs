@@ -111,10 +111,5 @@ namespace 圆体时钟
             OnDraw();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

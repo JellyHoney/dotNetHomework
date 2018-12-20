@@ -6,3 +6,11 @@ E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\GenerateResource.read
 E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\登录游戏大厅.exe
 E:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\登录游戏大厅.pdb
+D:\大学\dotNet\homework\登录游戏大厅\bin\Debug\登录游戏大厅.exe
+D:\大学\dotNet\homework\登录游戏大厅\bin\Debug\登录游戏大厅.pdb
+D:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\登录游戏大厅.Properties.Resources.resources
+D:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\登录游戏大厅.exe
+D:\大学\dotNet\homework\登录游戏大厅\obj\x86\Debug\登录游戏大厅.pdb
