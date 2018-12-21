@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace database1
+namespace 生成数据实验
 {
     static class Program
     {

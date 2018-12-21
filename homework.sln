@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "database1", "database1\database1.csproj", "{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "database2", "database2\database2.csproj", "{14997682-FE66-48B6-9C37-E2140D3B2E86}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "生成数据实验", "database1\生成数据实验.csproj", "{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "圆体时钟", "圆体时钟\圆体时钟.csproj", "{79C08CED-DD50-4213-A553-2AA1196070F1}"
 EndProject
@@ -37,10 +37,6 @@ Global
 		{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}.Debug|x86.Build.0 = Debug|x86
 		{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}.Release|x86.ActiveCfg = Release|x86
 		{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}.Release|x86.Build.0 = Release|x86
-		{14997682-FE66-48B6-9C37-E2140D3B2E86}.Debug|x86.ActiveCfg = Debug|x86
-		{14997682-FE66-48B6-9C37-E2140D3B2E86}.Debug|x86.Build.0 = Debug|x86
-		{14997682-FE66-48B6-9C37-E2140D3B2E86}.Release|x86.ActiveCfg = Release|x86
-		{14997682-FE66-48B6-9C37-E2140D3B2E86}.Release|x86.Build.0 = Release|x86
 		{79C08CED-DD50-4213-A553-2AA1196070F1}.Debug|x86.ActiveCfg = Debug|x86
 		{79C08CED-DD50-4213-A553-2AA1196070F1}.Debug|x86.Build.0 = Debug|x86
 		{79C08CED-DD50-4213-A553-2AA1196070F1}.Release|x86.ActiveCfg = Release|x86
@@ -88,5 +84,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A7BEDEF-2EED-450F-9BAA-BA2652248FB7}
 	EndGlobalSection
 EndGlobal
