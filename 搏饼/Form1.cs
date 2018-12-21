@@ -14,10 +14,26 @@ namespace 搏饼
         Random rd;
         int[] num = new int[6];
         int[] cnt = new int[7];
+        Button[] btn = new System.Windows.Forms.Button[6];
+        void Myinit()
+        {
+            for (int i = 0; i < 6; ++i)
+            {
+                this.btn[i] = new System.Windows.Forms.Button();
+                this.btn[i].Location = new System.Drawing.Point(10+i*80, 26);
+                this.btn[i].Name = "btn" + i.ToString();
+                this.btn[i].Size = new System.Drawing.Size(77, 67);
+                this.btn[i].TabIndex = 5;
+                this.btn[i].Text = "";
+                this.btn[i].UseVisualStyleBackColor = true;
+                this.Controls.Add(this.btn[i]);
+            }
+        }
         public Form1()
         {
             InitializeComponent();
             rd = new Random();
+            Myinit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,13 +87,11 @@ namespace 搏饼
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            String s = "";
             for (int i = 0; i < 6; ++i)
             {
                 num[i] = rd.Next(1, 7);
-                s += num[i].ToString();
+                btn[i].BackgroundImage =Image.FromFile(@"..\..\Resources\" + num[i].ToString() + ".png");
             }
-            richTextBox1.Text = s;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

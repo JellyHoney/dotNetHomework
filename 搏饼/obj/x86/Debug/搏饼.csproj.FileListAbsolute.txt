@@ -18,10 +18,10 @@ E:\大学\dotNet\homework\搏饼\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\大学\dotNet\homework\搏饼\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\大学\dotNet\homework\搏饼\bin\Debug\搏饼.exe
 D:\大学\dotNet\homework\搏饼\bin\Debug\搏饼.pdb
-D:\大学\dotNet\homework\搏饼\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.Form1.resources
 D:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.Properties.Resources.resources
-D:\大学\dotNet\homework\搏饼\obj\x86\Debug\GenerateResource.read.1.tlog
-D:\大学\dotNet\homework\搏饼\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.exe
 D:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.pdb
+D:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.csprojAssemblyReference.cache
+D:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.csproj.GenerateResource.cache
+D:\大学\dotNet\homework\搏饼\obj\x86\Debug\搏饼.csproj.CoreCompileInputs.cache
