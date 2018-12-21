@@ -21,13 +21,15 @@ namespace 通讯录
         {
             groupBox1.Controls.Clear();
             AddGroup t = new AddGroup(this);
+            t.Location = new System.Drawing.Point(0, 0);
             groupBox1.Controls.Add(t);
             
         }
         private void 添加联系人ToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            AddContacts t = new AddContacts(this);
             groupBox1.Controls.Clear();
+            AddContacts t = new AddContacts(this);
+            t.Location = new System.Drawing.Point(0, 0);
             groupBox1.Controls.Add(t);
         }
 

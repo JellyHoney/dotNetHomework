@@ -20,6 +20,7 @@ namespace 通讯录
         {
             InitializeComponent();
             this.con = con;
+            textBox1.Text = con.gname;
         }
 
         private void button1_Click(object sender, EventArgs e)
