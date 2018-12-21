@@ -1,6 +1,6 @@
 ﻿namespace 登录游戏大厅
 {
-    partial class Launch
+    partial class login
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnLogin = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnMinimized = new System.Windows.Forms.Button();
+            this.BtnMenu = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.注册账号ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,20 +40,20 @@
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // BtnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(56, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 39);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.BtnLogin.FlatAppearance.BorderSize = 0;
+            this.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnLogin.Location = new System.Drawing.Point(56, 304);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.Size = new System.Drawing.Size(179, 39);
+            this.BtnLogin.TabIndex = 3;
+            this.BtnLogin.UseVisualStyleBackColor = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // BtnClose
             // 
@@ -70,35 +70,35 @@
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // button2
+            // BtnMinimized
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(238, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(20, 20);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnMinimized.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMinimized.FlatAppearance.BorderSize = 0;
+            this.BtnMinimized.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnMinimized.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMinimized.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnMinimized.Location = new System.Drawing.Point(238, 2);
+            this.BtnMinimized.Name = "BtnMinimized";
+            this.BtnMinimized.Size = new System.Drawing.Size(20, 20);
+            this.BtnMinimized.TabIndex = 7;
+            this.BtnMinimized.UseVisualStyleBackColor = false;
+            this.BtnMinimized.Click += new System.EventHandler(this.BtnMinimized_Click);
             // 
-            // button3
+            // BtnMenu
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(210, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(20, 20);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BtnMenu.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMenu.FlatAppearance.BorderSize = 0;
+            this.BtnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenu.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnMenu.Location = new System.Drawing.Point(210, 2);
+            this.BtnMenu.Name = "BtnMenu";
+            this.BtnMenu.Size = new System.Drawing.Size(20, 20);
+            this.BtnMenu.TabIndex = 8;
+            this.BtnMenu.UseVisualStyleBackColor = false;
+            this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
             // contextMenuStrip1
             // 
@@ -117,20 +117,31 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(56, 204);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.Location = new System.Drawing.Point(57, 203);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(179, 14);
             this.textBox1.TabIndex = 9;
+            this.textBox1.Text = "账号";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(56, 240);
+            this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox2.Location = new System.Drawing.Point(57, 240);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(179, 14);
             this.textBox2.TabIndex = 10;
+            this.textBox2.Text = "密码";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
-            // Launch
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,12 +150,12 @@
             this.ControlBox = false;
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnMenu);
+            this.Controls.Add(this.BtnMinimized);
             this.Controls.Add(this.BtnClose);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Launch";
+            this.Name = "login";
             this.Text = "Form1";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Launch_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Launch_MouseMove);
@@ -156,10 +167,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Button BtnClose;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnMinimized;
+        private System.Windows.Forms.Button BtnMenu;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 注册账号ToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;

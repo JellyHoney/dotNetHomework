@@ -15,7 +15,19 @@ namespace 登录游戏大厅
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameCenter());
+            login lg = new login();
+            lg.ShowDialog();
+            if(lg.id==0)
+            {
+                lg.Dispose();
+                return;
+            }
+            else
+            {
+                int id = lg.id;
+                lg.Dispose();
+                Application.Run(new GameCenter(id));
+            }
         }
     }
 }

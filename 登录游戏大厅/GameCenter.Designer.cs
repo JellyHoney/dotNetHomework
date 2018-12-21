@@ -34,9 +34,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 661);
+            this.BackgroundImage = global::登录游戏大厅.Properties.Resources.gamecenter_bg;
+            this.ClientSize = new System.Drawing.Size(1280, 700);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GameCenter";
             this.Text = "GameCenter";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GameCenter_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GameCenter_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GameCenter_MouseUp);
             this.ResumeLayout(false);
 
         }

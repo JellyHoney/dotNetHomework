@@ -53,11 +53,11 @@
     <Compile Include="GameCenter.Designer.cs">
       <DependentUpon>GameCenter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\Launch.cs">
+    <Compile Include="Login\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\Launch.Designer.cs">
-      <DependentUpon>Launch.cs</DependentUpon>
+    <Compile Include="Login\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,8 +71,8 @@
     <EmbeddedResource Include="GameCenter.resx">
       <DependentUpon>GameCenter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\Launch.resx">
-      <DependentUpon>Launch.cs</DependentUpon>
+    <EmbeddedResource Include="Login\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -105,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamecenter_bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
