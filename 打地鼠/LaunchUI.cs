@@ -15,6 +15,10 @@ namespace 打地鼠
         Launch launch;
         public LaunchUI(Launch launch)
         {
+            this.DoubleBuffered = true;//设置本窗体
+            SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true); // 禁止擦除背景.
+            SetStyle(ControlStyles.DoubleBuffer, true); // 双缓冲
             InitializeComponent();
             this.launch = launch;
             this.MouseDown += launch.HammerDown;

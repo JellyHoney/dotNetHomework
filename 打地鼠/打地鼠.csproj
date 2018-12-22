@@ -71,6 +71,12 @@
     <Compile Include="LaunchUI.Designer.cs">
       <DependentUpon>LaunchUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="NextLevelUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NextLevelUI.Designer.cs">
+      <DependentUpon>NextLevelUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LaunchUI.resx">
       <DependentUpon>LaunchUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NextLevelUI.resx">
+      <DependentUpon>NextLevelUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingUI.resx">
       <DependentUpon>SettingUI.cs</DependentUpon>

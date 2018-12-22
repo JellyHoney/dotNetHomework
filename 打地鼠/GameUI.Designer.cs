@@ -39,10 +39,14 @@
             this.mouse6 = new System.Windows.Forms.PictureBox();
             this.mouse3 = new System.Windows.Forms.PictureBox();
             this.timeRest = new System.Windows.Forms.Label();
-            this.PicTimer = new System.Windows.Forms.PictureBox();
             this.gameTime = new System.Windows.Forms.Timer(this.components);
-            this.PicScore = new System.Windows.Forms.PictureBox();
             this.mouseGen = new System.Windows.Forms.Timer(this.components);
+            this.LbTotalScore = new System.Windows.Forms.Label();
+            this.LbThisScore = new System.Windows.Forms.Label();
+            this.LbPassScore = new System.Windows.Forms.Label();
+            this.LbLevel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.mouse8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse5)).BeginInit();
@@ -52,8 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.mouse9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicTimer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicScore)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mouse8
@@ -149,41 +153,86 @@
             // timeRest
             // 
             this.timeRest.BackColor = System.Drawing.Color.GreenYellow;
-            this.timeRest.Location = new System.Drawing.Point(101, 577);
+            this.timeRest.Location = new System.Drawing.Point(93, 37);
             this.timeRest.Name = "timeRest";
-            this.timeRest.Size = new System.Drawing.Size(360, 12);
+            this.timeRest.Size = new System.Drawing.Size(380, 12);
             this.timeRest.TabIndex = 28;
-            // 
-            // PicTimer
-            // 
-            this.PicTimer.BackColor = System.Drawing.Color.Transparent;
-            this.PicTimer.BackgroundImage = global::打地鼠.Properties.Resources.计时;
-            this.PicTimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PicTimer.Location = new System.Drawing.Point(3, 540);
-            this.PicTimer.Name = "PicTimer";
-            this.PicTimer.Size = new System.Drawing.Size(772, 57);
-            this.PicTimer.TabIndex = 27;
-            this.PicTimer.TabStop = false;
             // 
             // gameTime
             // 
+            this.gameTime.Interval = 10;
             this.gameTime.Tick += new System.EventHandler(this.gameTime_Tick);
-            // 
-            // PicScore
-            // 
-            this.PicScore.BackColor = System.Drawing.Color.Transparent;
-            this.PicScore.BackgroundImage = global::打地鼠.Properties.Resources.横幅;
-            this.PicScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PicScore.Location = new System.Drawing.Point(3, 3);
-            this.PicScore.Name = "PicScore";
-            this.PicScore.Size = new System.Drawing.Size(794, 79);
-            this.PicScore.TabIndex = 18;
-            this.PicScore.TabStop = false;
             // 
             // mouseGen
             // 
-            this.mouseGen.Interval = 1000;
             this.mouseGen.Tick += new System.EventHandler(this.mouseGen_Tick);
+            // 
+            // LbTotalScore
+            // 
+            this.LbTotalScore.AutoSize = true;
+            this.LbTotalScore.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LbTotalScore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LbTotalScore.Location = new System.Drawing.Point(128, 34);
+            this.LbTotalScore.Name = "LbTotalScore";
+            this.LbTotalScore.Size = new System.Drawing.Size(25, 28);
+            this.LbTotalScore.TabIndex = 29;
+            this.LbTotalScore.Text = "0";
+            // 
+            // LbThisScore
+            // 
+            this.LbThisScore.AutoSize = true;
+            this.LbThisScore.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LbThisScore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LbThisScore.Location = new System.Drawing.Point(424, 34);
+            this.LbThisScore.Name = "LbThisScore";
+            this.LbThisScore.Size = new System.Drawing.Size(25, 28);
+            this.LbThisScore.TabIndex = 30;
+            this.LbThisScore.Text = "0";
+            // 
+            // LbPassScore
+            // 
+            this.LbPassScore.AutoSize = true;
+            this.LbPassScore.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LbPassScore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LbPassScore.Location = new System.Drawing.Point(677, 34);
+            this.LbPassScore.Name = "LbPassScore";
+            this.LbPassScore.Size = new System.Drawing.Size(25, 28);
+            this.LbPassScore.TabIndex = 31;
+            this.LbPassScore.Text = "0";
+            // 
+            // LbLevel
+            // 
+            this.LbLevel.AutoSize = true;
+            this.LbLevel.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LbLevel.ForeColor = System.Drawing.Color.Gold;
+            this.LbLevel.Location = new System.Drawing.Point(621, 29);
+            this.LbLevel.Name = "LbLevel";
+            this.LbLevel.Size = new System.Drawing.Size(25, 28);
+            this.LbLevel.TabIndex = 32;
+            this.LbLevel.Text = "1";
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::打地鼠.Properties.Resources.横幅;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.LbTotalScore);
+            this.panel1.Controls.Add(this.LbThisScore);
+            this.panel1.Controls.Add(this.LbPassScore);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(794, 79);
+            this.panel1.TabIndex = 33;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::打地鼠.Properties.Resources.计时;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.timeRest);
+            this.panel2.Controls.Add(this.LbLevel);
+            this.panel2.Location = new System.Drawing.Point(3, 532);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(794, 57);
+            this.panel2.TabIndex = 34;
             // 
             // GameUI
             // 
@@ -192,9 +241,8 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::打地鼠.Properties.Resources.背景;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.PicScore);
-            this.Controls.Add(this.timeRest);
-            this.Controls.Add(this.PicTimer);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.mouse8);
             this.Controls.Add(this.mouse7);
             this.Controls.Add(this.mouse5);
@@ -206,6 +254,7 @@
             this.Controls.Add(this.mouse3);
             this.Name = "GameUI";
             this.Size = new System.Drawing.Size(800, 600);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameUI_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.mouse8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse5)).EndInit();
@@ -215,8 +264,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.mouse9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouse3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicTimer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicScore)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -233,9 +284,13 @@
         private System.Windows.Forms.PictureBox mouse6;
         private System.Windows.Forms.PictureBox mouse3;
         private System.Windows.Forms.Label timeRest;
-        private System.Windows.Forms.PictureBox PicTimer;
         private System.Windows.Forms.Timer gameTime;
-        private System.Windows.Forms.PictureBox PicScore;
         private System.Windows.Forms.Timer mouseGen;
+        private System.Windows.Forms.Label LbTotalScore;
+        private System.Windows.Forms.Label LbThisScore;
+        private System.Windows.Forms.Label LbPassScore;
+        private System.Windows.Forms.Label LbLevel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
