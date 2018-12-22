@@ -46,16 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimationLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnimationLabel.Designer.cs">
+      <DependentUpon>AnimationLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameUI.Designer.cs">
+      <DependentUpon>GameUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HammerCursor.cs" />
     <Compile Include="Launch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Launch.Designer.cs">
       <DependentUpon>Launch.cs</DependentUpon>
     </Compile>
+    <Compile Include="LaunchUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LaunchUI.Designer.cs">
+      <DependentUpon>LaunchUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingUI.Designer.cs">
+      <DependentUpon>SettingUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnimationLabel.resx">
+      <DependentUpon>AnimationLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameUI.resx">
+      <DependentUpon>GameUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Launch.resx">
       <DependentUpon>Launch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaunchUI.resx">
+      <DependentUpon>LaunchUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingUI.resx">
+      <DependentUpon>SettingUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
