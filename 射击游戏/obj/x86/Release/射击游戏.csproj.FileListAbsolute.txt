@@ -1,8 +1,0 @@
-E:\大学\dotNet\homework\射击游戏\bin\Release\射击游戏.exe
-E:\大学\dotNet\homework\射击游戏\bin\Release\射击游戏.pdb
-E:\大学\dotNet\homework\射击游戏\obj\x86\Release\ResolveAssemblyReference.cache
-E:\大学\dotNet\homework\射击游戏\obj\x86\Release\射击游戏.Properties.Resources.resources
-E:\大学\dotNet\homework\射击游戏\obj\x86\Release\GenerateResource.read.1.tlog
-E:\大学\dotNet\homework\射击游戏\obj\x86\Release\GenerateResource.write.1.tlog
-E:\大学\dotNet\homework\射击游戏\obj\x86\Release\射击游戏.exe
-E:\大学\dotNet\homework\射击游戏\obj\x86\Release\射击游戏.pdb
