@@ -43,14 +43,15 @@
             // BtnLogin
             // 
             this.BtnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnLogin.FlatAppearance.BorderSize = 0;
             this.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnLogin.Location = new System.Drawing.Point(56, 304);
+            this.BtnLogin.Location = new System.Drawing.Point(58, 308);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(179, 39);
+            this.BtnLogin.Size = new System.Drawing.Size(179, 32);
             this.BtnLogin.TabIndex = 3;
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
