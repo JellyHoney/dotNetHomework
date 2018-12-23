@@ -13,6 +13,7 @@ namespace 打地鼠
     public partial class LaunchUI : UserControl
     {
         Launch launch;
+        GameUI gameUI;
         public LaunchUI(Launch launch)
         {
             this.DoubleBuffered = true;//设置本窗体
@@ -23,16 +24,23 @@ namespace 打地鼠
             this.launch = launch;
             this.MouseDown += launch.HammerDown;
             this.MouseUp += launch.HammerUp;
+            gameUI = new GameUI(launch);
+        //    this.Controls.Add(gameUI);
+      //      this.BringToFront();
+         //   gameUI.SendToBack();
+            //    this.Focus();
         }
         private void PicNewGame_Click(object sender, EventArgs e)
         {
-            GameUI gameUI = new GameUI(launch);
-            launch.Controls.Add(gameUI);
-            launch.Controls.Remove(this);
+            this.Controls.Add(gameUI);
+            gameUI.BringToFront();
+            gameUI.Focus();
+            gameUI.Start();
         }
         private void PicContinueGame_Click(object sender, EventArgs e)
         {
-
+            gameUI.BringToFront();
+            gameUI.Continue();
         }
         private void PicSetting_Click(object sender, EventArgs e)
         {

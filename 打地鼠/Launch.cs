@@ -15,10 +15,14 @@ namespace 打地鼠
     {
         public Launch()
         {
+            this.DoubleBuffered = true;//设置本窗体
+            SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true); // 禁止擦除背景.
+            SetStyle(ControlStyles.DoubleBuffer, true); // 双缓冲
             InitializeComponent();
             this.Cursor = HammerCursor.HammerUp();
-            LaunchUI lui = new LaunchUI(this);
-            this.Controls.Add(lui);
+            LaunchUI launchUI = new LaunchUI(this);
+            this.Controls.Add(launchUI);
         }
         public void HammerDown(object sender, MouseEventArgs e)
         {

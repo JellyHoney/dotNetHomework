@@ -46,7 +46,7 @@
             // 
             this.PicTitle.BackColor = System.Drawing.Color.Transparent;
             this.PicTitle.Image = global::打地鼠.Properties.Resources.打地鼠1;
-            this.PicTitle.Location = new System.Drawing.Point(64, 54);
+            this.PicTitle.Location = new System.Drawing.Point(3, 115);
             this.PicTitle.Name = "PicTitle";
             this.PicTitle.Size = new System.Drawing.Size(369, 156);
             this.PicTitle.TabIndex = 4;

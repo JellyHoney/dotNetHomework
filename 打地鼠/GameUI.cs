@@ -36,11 +36,48 @@ namespace 打地鼠
                 mouse[i].Click += new System.EventHandler(this.mouseHit);
                 mouse[i].MouseDown += launch.HammerDown;
                 mouse[i].MouseUp += launch.HammerUp;
-                mouse[i].Tag = 0;
             }
-            LbPassScore.Text = defaultPassScore.ToString();
+            this.MouseDown += launch.HammerDown;
+            this.MouseUp += launch.HammerUp;
             gameTime.Enabled = true;
             mouseGen.Enabled = true;
+            Pause();
+        }
+        public void Start()//开始游戏
+        {
+            for (int i = 0; i < 9; ++i)
+            {
+                mouse[i].Tag = 0;
+            }
+            totalScore = 0;
+            thisScore = 0;
+            passScore = defaultPassScore;
+            lastpassScore = defaultPassScore;
+            level = 1;
+            LbTotalScore.Text = "0";
+            LbThisScore.Text = "0";
+            LbPassScore.Text = defaultPassScore.ToString();
+            LbLevel.Text = "1";
+            timeRest.Width = 380;
+            Continue();
+        }
+        public void Continue()//继续游戏
+        {
+            for (int i = 0; i < 9; ++i)
+            {
+                mouse[i].Visible = true;
+            }
+            gameTime.Start();
+            mouseGen.Start();
+        }
+        public void Pause()//暂停游戏
+        {
+            for(int i=0;i<9;++i)
+            {
+                mouse[i].Visible = false;
+            }
+            gameTime.Stop();
+            mouseGen.Stop();
         }
         void StartNextLevel()
         {
@@ -143,10 +180,8 @@ namespace 打地鼠
         {
             if(e.KeyCode==Keys.Escape)
             {
-                LaunchUI launchUI = new LaunchUI(launch);
-                this.Controls.Add(launchUI);
-                launchUI.BringToFront();
-
+                this.SendToBack();
+                Pause();
             }
         }
     }

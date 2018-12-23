@@ -21,7 +21,6 @@ namespace 打地鼠
             this.LbPassScore.Text = this.gameUI.passScore.ToString();
             this.LbTotalScore.Text = this.gameUI.totalScore.ToString();
             this.LbThisLevel.Text = this.gameUI.level.ToString();
-
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
