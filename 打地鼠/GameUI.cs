@@ -14,12 +14,15 @@ namespace 打地鼠
     public partial class GameUI : UserControl
     {
         const int defaultPassScore = 500;//默认初始分数
-        int mouseNum = 1;//平均每秒出现的地鼠的个数
+        double mouseNum = 1;//平均每秒出现的地鼠的个数
         public int totalScore = 0;//总分
         public int thisScore = 0;//当前关卡分数
         public int passScore = defaultPassScore;//需要过关的分数
         public int lastpassScore = defaultPassScore;//上一关通关的分数
         public int level = 1;//当前关卡等级
+        public int EXISTTIME = 1000;//地鼠存在的时间
+        public int KILLEDEXISTTIME = 500;//地鼠被打后存在的时间
+        public int[] life = new int[9];//地鼠还剩余的时间
         PictureBox[] mouse;
         Launch launch;
         public GameUI(Launch launch)
@@ -41,12 +44,14 @@ namespace 打地鼠
             this.MouseUp += launch.HammerUp;
             gameTime.Enabled = true;
             mouseGen.Enabled = true;
+            Start();
             Pause();
         }
         public void Start()//开始游戏
         {
             for (int i = 0; i < 9; ++i)
             {
+                life[i] = 0;
                 mouse[i].Tag = 0;
             }
             totalScore = 0;
@@ -81,19 +86,23 @@ namespace 打地鼠
         }
         void StartNextLevel()
         {
+            Pause();
             if(totalScore>=passScore)
             {
                 NextLevelUI nextLevel = new NextLevelUI(this);
                 this.Controls.Add(nextLevel);
                 nextLevel.BringToFront();
+                nextLevel.Focus();
             }
             else
             {
                 MessageBox.Show("game over");
+                Pause();
             }
         }
         public void NextLevel()
         {
+            Continue();
             for(int i=0;i<9;++i)
             {
                 mouse[i].BackgroundImage = null;
@@ -132,25 +141,29 @@ namespace 打地鼠
         Random rd = new Random();
         private void mouseGen_Tick(object sender, EventArgs e)//生成地鼠
         {
-            for (int i = 0; i < 9; ++i)
+            for (int i=0;i<9;++i)
             {
-                if(Convert.ToInt32(mouse[i].Tag)==0)
+                if (life[i] == 0)
                 {
                     mouse[i].BackgroundImage = null;
+                    mouse[i].Tag = 0;
                 }
                 else
                 {
-                    mouse[i].Tag = Convert.ToInt32(mouse[i].Tag) - mouseGen.Interval;
+                    life[i] -= mouseGen.Interval;
                 }
             }
-            for (int i = 0; i < mouseNum; ++i)
+            if(rd.Next(0,100)<(mouseNum*10))
             {
-                if (rd.Next(0, 100) < 10)
+                int gen = rd.Next(0, 9);
+                do
                 {
-                    int gen = rd.Next(0, 9);
-                    mouse[gen].BackgroundImage = Properties.Resources.地鼠;
-                    mouse[gen].Tag = 1000;
-                }
+                    gen = rd.Next(0, 9);
+                } while (mouse[gen].BackgroundImage != null);
+                mouse[gen].BackgroundImage = Properties.Resources.地鼠;
+                mouse[gen].Tag = 1;
+                life[gen] = EXISTTIME;
+
             }
         }
         private void gameTime_Tick(object sender, EventArgs e)

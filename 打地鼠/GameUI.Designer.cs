@@ -160,7 +160,7 @@
             // 
             // gameTime
             // 
-            this.gameTime.Interval = 10;
+            this.gameTime.Interval = 30;
             this.gameTime.Tick += new System.EventHandler(this.gameTime_Tick);
             // 
             // mouseGen
