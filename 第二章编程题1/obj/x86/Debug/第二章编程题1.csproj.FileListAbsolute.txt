@@ -20,10 +20,10 @@ E:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\GenerateResource.rea
 E:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\大学\dotNet\homework\第二章编程题1\bin\Debug\第二章编程题1.exe
 D:\大学\dotNet\homework\第二章编程题1\bin\Debug\第二章编程题1.pdb
-D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\第二章编程题1.Form1.resources
 D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\第二章编程题1.Properties.Resources.resources
-D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\GenerateResource.read.1.tlog
-D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\第二章编程题1.exe
 D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\第二章编程题1.pdb
+D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\第二章编程题1.csprojAssemblyReference.cache
+D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\第二章编程题1.csproj.GenerateResource.cache
+D:\大学\dotNet\homework\第二章编程题1\obj\x86\Debug\第二章编程题1.csproj.CoreCompileInputs.cache

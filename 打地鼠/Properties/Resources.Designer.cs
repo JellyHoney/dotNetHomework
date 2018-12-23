@@ -63,9 +63,27 @@ namespace 打地鼠.Properties {
         /// <summary>
         ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Hit {
+        internal static System.IO.UnmanagedMemoryStream Gameover {
             get {
-                return ResourceManager.GetStream("Hit", resourceCulture);
+                return ResourceManager.GetStream("Gameover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream No {
+            get {
+                return ResourceManager.GetStream("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pass {
+            get {
+                return ResourceManager.GetStream("Pass", resourceCulture);
             }
         }
         

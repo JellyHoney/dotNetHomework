@@ -21,6 +21,5 @@ D:\大学\dotNet\homework\连连看\bin\Debug\连连看.application
 D:\大学\dotNet\homework\连连看\obj\x86\Debug\连连看.Form1.resources
 D:\大学\dotNet\homework\连连看\obj\x86\Debug\连连看.exe.manifest
 D:\大学\dotNet\homework\连连看\obj\x86\Debug\连连看.application
-D:\大学\dotNet\homework\连连看\obj\x86\Debug\连连看.csprojAssemblyReference.cache
 D:\大学\dotNet\homework\连连看\obj\x86\Debug\连连看.csproj.GenerateResource.cache
 D:\大学\dotNet\homework\连连看\obj\x86\Debug\连连看.csproj.CoreCompileInputs.cache

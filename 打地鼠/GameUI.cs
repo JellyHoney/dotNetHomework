@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Threading;
 
 namespace 打地鼠
 {
@@ -93,22 +94,35 @@ namespace 打地鼠
                 this.Controls.Add(nextLevel);
                 nextLevel.BringToFront();
                 nextLevel.Focus();
+                if (launch.soundsOn)
+                {
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.Pass);
+                    player.Play();
+                }
             }
             else
             {
-                MessageBox.Show("game over");
+                if (launch.soundsOn)
+                {
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.Gameover);
+                    player.Play();
+                }
                 Pause();
             }
         }
         public void NextLevel()
         {
             Continue();
-            for(int i=0;i<9;++i)
+            SoundPlayer player = new SoundPlayer(Properties.Resources.Pass);
+            player.Stop();
+
+            for (int i=0;i<9;++i)
             {
                 mouse[i].BackgroundImage = null;
             }
             timeRest.Width = 380;
             level++;
+            mouseNum += 0.2;
             LbLevel.Text = level.ToString();
             thisScore = 0;
             LbThisScore.Text = "0";
@@ -133,8 +147,11 @@ namespace 打地鼠
                 AnimationLabel al = new AnimationLabel();
                 al.Text = "+100";
                 al.Parent = (sender as PictureBox);
-                SoundPlayer player = new SoundPlayer(Properties.Resources.Hit);
-                player.Play();
+                if(launch.soundsOn)
+                {
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.No);
+                    player.Play();
+                }
             }
         }
 

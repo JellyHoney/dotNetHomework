@@ -24,11 +24,18 @@ namespace 打地鼠
             this.launch = launch;
             this.MouseDown += launch.HammerDown;
             this.MouseUp += launch.HammerUp;
+            this.PicNewGame.MouseDown += launch.HammerDown;
+            this.PicNewGame.MouseUp += launch.HammerUp;
+            this.PicContinueGame.MouseDown += launch.HammerDown;
+            this.PicContinueGame.MouseUp += launch.HammerUp;
+            this.PicIntroduce.MouseDown += launch.HammerDown;
+            this.PicIntroduce.MouseUp += launch.HammerUp;
+            this.PicSetting.MouseDown += launch.HammerDown;
+            this.PicSetting.MouseUp += launch.HammerUp;
+            this.PicQuit.MouseDown += launch.HammerDown;
+            this.PicQuit.MouseUp += launch.HammerUp;
+
             gameUI = new GameUI(launch);
-        //    this.Controls.Add(gameUI);
-      //      this.BringToFront();
-         //   gameUI.SendToBack();
-            //    this.Focus();
         }
         private void PicNewGame_Click(object sender, EventArgs e)
         {

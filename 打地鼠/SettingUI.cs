@@ -21,11 +21,17 @@ namespace 打地鼠
             panel1.MouseUp += launch.HammerUp;
             pictureBox1.MouseDown += launch.HammerDown;
             pictureBox1.MouseUp += launch.HammerUp;
+            checkBox1.Checked = launch.soundsOn;
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
             this.Dispose();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            launch.soundsOn = checkBox1.Checked;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace 打地鼠
 {
     public partial class Launch : Form
     {
+        public Boolean soundsOn = true;
         public Launch()
         {
             this.DoubleBuffered = true;//设置本窗体
