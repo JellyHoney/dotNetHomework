@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "打地鼠", "打地鼠\打�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "生成数据实验", "生成数据实验\生成数据实验.csproj", "{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{3D7EBF0B-9DDE-48E2-9556-132CA80D5675}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "动物连连看", "动物连连看\动物连连看.csproj", "{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,10 +111,14 @@ Global
 		{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}.Release|Any CPU.ActiveCfg = Release|x86
 		{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}.Release|x86.ActiveCfg = Release|x86
 		{222FFB9E-E133-44A0-B5E4-1FA70AFC7648}.Release|x86.Build.0 = Release|x86
-		{3D7EBF0B-9DDE-48E2-9556-132CA80D5675}.Debug|Any CPU.ActiveCfg = Debug
-		{3D7EBF0B-9DDE-48E2-9556-132CA80D5675}.Debug|x86.ActiveCfg = Debug
-		{3D7EBF0B-9DDE-48E2-9556-132CA80D5675}.Release|Any CPU.ActiveCfg = Release
-		{3D7EBF0B-9DDE-48E2-9556-132CA80D5675}.Release|x86.ActiveCfg = Release
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Debug|x86.Build.0 = Debug|Any CPU
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Release|x86.ActiveCfg = Release|Any CPU
+		{24D815E0-EDF7-41FD-BBD5-88B9E49EA016}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
