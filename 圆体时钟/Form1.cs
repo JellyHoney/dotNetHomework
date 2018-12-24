@@ -79,7 +79,7 @@ namespace 圆体时钟
                 {
                     minuteS = '0' + minuteS;
                 }
-                richTextBox1.Text = hourS + ":" + minuteS + "PM";
+                label1.Text = hourS + ":" + minuteS + "PM";
             }
             else
             {
@@ -93,7 +93,7 @@ namespace 圆体时钟
                 {
                     minuteS = '0' + minuteS;
                 }
-                richTextBox1.Text = hourS + ":" + minuteS + "PM";
+                label1.Text = hourS + ":" + minuteS + "PM";
             }
           //  this.Text = "时钟 "+richTextBox1.Text;
             this.Text = "时钟 " + DateTime.Now.ToString();
