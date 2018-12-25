@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
+            this.BoomButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,12 +56,27 @@
             this.menuButton.UseVisualStyleBackColor = false;
             this.menuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
+            // BoomButton
+            // 
+            this.BoomButton.BackColor = System.Drawing.Color.Transparent;
+            this.BoomButton.FlatAppearance.BorderSize = 0;
+            this.BoomButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BoomButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BoomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoomButton.Location = new System.Drawing.Point(723, 538);
+            this.BoomButton.Name = "BoomButton";
+            this.BoomButton.Size = new System.Drawing.Size(45, 45);
+            this.BoomButton.TabIndex = 3;
+            this.BoomButton.UseVisualStyleBackColor = false;
+            this.BoomButton.Click += new System.EventHandler(this.BoomButton_Click);
+            // 
             // GameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::动物连连看.Properties.Resources.gamebg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.BoomButton);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.panel1);
             this.Name = "GameUI";
@@ -73,5 +89,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button menuButton;
+        private System.Windows.Forms.Button BoomButton;
     }
 }

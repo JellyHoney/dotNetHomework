@@ -99,6 +99,27 @@ namespace 动物连连看
             pauseUI.BringToFront();
         }
 
+        private void BoomButton_Click(object sender, EventArgs e)
+        {
+            for (firstX = 1; firstX <= MAXROW; ++firstX)
+            {
+                for (firstY = 1; firstY <= MAXCOLUMN; ++firstY)
+                {
+                    for (secondX = 1; secondX <= MAXROW; ++secondX)
+                    {
+                        for (secondY = 1; secondY <= MAXCOLUMN; ++secondY)
+                        {
+                            if (Line())
+                            {
+                                firstX = firstY = secondX = secondY = 0;
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         private Boolean Line()
         {
             if (!this.pic[firstX - 1, firstY - 1].Visible || !this.pic[secondX - 1, secondY - 1].Visible) return false;
