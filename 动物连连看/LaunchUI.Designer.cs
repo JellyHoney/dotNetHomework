@@ -45,7 +45,7 @@
             this.helpButton.Size = new System.Drawing.Size(122, 34);
             this.helpButton.TabIndex = 0;
             this.helpButton.UseVisualStyleBackColor = false;
-            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            this.helpButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // startButton
             // 
@@ -59,7 +59,7 @@
             this.startButton.Size = new System.Drawing.Size(197, 48);
             this.startButton.TabIndex = 1;
             this.startButton.UseVisualStyleBackColor = false;
-            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            this.startButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // settingButton
             // 

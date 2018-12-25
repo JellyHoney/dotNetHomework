@@ -19,14 +19,14 @@ namespace 动物连连看
             this.launch = launch;
         }
 
-        private void helpButton_Click(object sender, EventArgs e)
+        private void HelpButton_Click(object sender, EventArgs e)
         {
             HelpUI helpUI = new HelpUI(launch);
             launch.Controls.Add(helpUI);
             helpUI.BringToFront();
         }
 
-        private void startButton_Click(object sender, EventArgs e)
+        private void StartButton_Click(object sender, EventArgs e)
         {
             launch.Controls["gameUI"].BringToFront();
         }
