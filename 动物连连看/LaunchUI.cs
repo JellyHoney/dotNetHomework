@@ -28,10 +28,7 @@ namespace 动物连连看
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            GameUI gameUI = new GameUI(launch);
-            launch.Controls.Add(gameUI);
-            gameUI.BringToFront();
-
+            launch.Controls["gameUI"].BringToFront();
         }
     }
 }

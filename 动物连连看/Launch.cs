@@ -12,6 +12,8 @@ namespace 动物连连看
 {
     public partial class Launch : Form
     {
+        LaunchUI launchUI;
+        GameUI gameUI;
         public Launch()
         {   
             InitializeComponent();
@@ -19,9 +21,12 @@ namespace 动物连连看
             this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-            LaunchUI launchUI = new LaunchUI(this);
-            this.Controls.Add(launchUI);
             this.Cursor = Mouse.MouseUp();
+            launchUI = new LaunchUI(this);
+            this.Controls.Add(launchUI);
+            gameUI = new GameUI(this);
+            this.Controls.Add(gameUI);
+
         }
 
         public void Launch_MouseDown(object sender, MouseEventArgs e)
