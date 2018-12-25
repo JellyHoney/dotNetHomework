@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Media;
 namespace 动物连连看
 {
     public partial class GameUI : UserControl
@@ -89,6 +89,8 @@ namespace 动物连连看
             vis[firstX, firstY] = -1;
             vis[secondX, secondY] = -1;
             cnt++;
+            SoundPlayer player = new SoundPlayer(Properties.Resources.light);
+            player.Play();
             if (cnt * 2 == MAXROW * MAXCOLUMN)
             {
                 MessageBox.Show("您赢了");
