@@ -47,6 +47,8 @@ namespace 动物连连看
                     this.pic[i, j].BackgroundImageLayout = ImageLayout.Stretch;
                     this.panel1.Controls.Add(this.pic[i, j]);
                     this.pic[i, j].Click += new EventHandler(this.PicClick);
+                    this.pic[i, j].Tag = new KeyValuePair<int, int>(i, j);
+                    this.pic[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
         }
@@ -136,30 +138,31 @@ namespace 动物连连看
         }
         private void PicClick(object sender, EventArgs e)
         {
-            //     ((PictureBox)sender).Visible = false;
-            for (int i = 0; i < MAXROW; ++i)
+            KeyValuePair<int, int> keyValuePair = (KeyValuePair<int, int>)(sender as PictureBox).Tag;
+            int i=keyValuePair.Key;
+            int j = keyValuePair.Value;
+            if (vis[i + 1, j + 1] == 1)
             {
-                for (int j = 0; j < MAXCOLUMN; ++j)
+                if (firstX == 0 && firstY == 0)
                 {
-                    if (this.pic[i, j] == (PictureBox)sender)
+                    firstX = i + 1;
+                    firstY = j + 1;
+                    this.pic[i, j].Image = Properties.Resources.frame;
+                }
+                else
+                {
+                    secondX = i + 1;
+                    secondY = j + 1;
+                    this.pic[firstX - 1, firstY - 1].Image = null;
+                    if(Line())
                     {
-                        if (vis[i + 1, j + 1] == 1)
-                        {
-                            if (firstX == 0 && firstY == 0)
-                            {
-                                firstX = i + 1;
-                                firstY = j + 1;
-                                this.pic[i, j].BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-                            }
-                            else
-                            {
-                                secondX = i + 1;
-                                secondY = j + 1;
-                                this.pic[firstX - 1, firstY - 1].BorderStyle = System.Windows.Forms.BorderStyle.None;
-                                Line();
-                                firstX = firstY = secondX = secondY = 0;
-                            }
-                        }
+                        firstX = firstY = secondX = secondY = 0;
+                    }
+                    else
+                    {
+                        firstX = secondX;
+                        firstY = secondY;
+                        this.pic[i, j].Image = Properties.Resources.frame;
                     }
                 }
             }

@@ -16,6 +16,10 @@ namespace 动物连连看
             Graphics g = Graphics.FromImage(bmp);
             Rectangle destRect = new Rectangle(0, 0, img_width, img_width);
             Rectangle srcRect = new Rectangle(n % 4 * img_width, n / 4 * img_width, img_width, img_width);
+            if(n/4==3)
+            {
+                srcRect = new Rectangle(n % 4 * img_width+10, n / 4 * img_width, img_width, img_width);
+            }
             g.DrawImage(Properties.Resources.animal, destRect, srcRect, GraphicsUnit.Pixel);
             g.Dispose();
             return bmp;

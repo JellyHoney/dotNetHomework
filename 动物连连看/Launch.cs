@@ -15,9 +15,7 @@ namespace 动物连连看
         public Launch()
         {   
             InitializeComponent();
-            //  TODO:  在  InitComponent  调用后添加任何初始化 
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            //开启双缓冲
             this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
