@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
             this.BoomButton = new System.Windows.Forms.Button();
+            this.FreshButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,12 +71,27 @@
             this.BoomButton.UseVisualStyleBackColor = false;
             this.BoomButton.Click += new System.EventHandler(this.BoomButton_Click);
             // 
+            // FreshButton
+            // 
+            this.FreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.FreshButton.FlatAppearance.BorderSize = 0;
+            this.FreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.FreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.FreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FreshButton.Location = new System.Drawing.Point(672, 538);
+            this.FreshButton.Name = "FreshButton";
+            this.FreshButton.Size = new System.Drawing.Size(45, 45);
+            this.FreshButton.TabIndex = 4;
+            this.FreshButton.UseVisualStyleBackColor = false;
+            this.FreshButton.Click += new System.EventHandler(this.FreshButton_Click);
+            // 
             // GameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::动物连连看.Properties.Resources.gamebg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.FreshButton);
             this.Controls.Add(this.BoomButton);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.panel1);
@@ -90,5 +106,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Button BoomButton;
+        private System.Windows.Forms.Button FreshButton;
     }
 }

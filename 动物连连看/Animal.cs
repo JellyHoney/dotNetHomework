@@ -11,7 +11,7 @@ namespace 动物连连看
         static int img_width = 163;
         public static Image GetAnimal(int n)
         {
-            if (n >= 21) return null;
+            if (n >= 21||n<0) return null;
             Bitmap bmp = new Bitmap(img_width, img_width);
             Graphics g = Graphics.FromImage(bmp);
             Rectangle destRect = new Rectangle(0, 0, img_width, img_width);

@@ -34,6 +34,13 @@ namespace 动物连连看
         }
         private void InitPic()
         {
+            for (int i = 0; i < MAXROW + 2; ++i)
+            {
+                for (int j = 0; j < MAXCOLUMN + 2; ++j)
+                {
+                    vis[i, j] = -1;
+                }
+            }
             this.pic = new PictureBox[MAXROW, MAXCOLUMN];
             for (int i = 0; i < MAXROW; ++i)
             {
@@ -41,14 +48,13 @@ namespace 动物连连看
                 {
                     this.pic[i, j] = new PictureBox();
                     this.pic[i, j].Location = new Point(picWidth * j, picWidth * i);
-                    this.pic[i, j].Name = "pic" + (i * MAXCOLUMN + j).ToString();
                     this.pic[i, j].Width = picWidth;
                     this.pic[i, j].Height = picWidth;
                     this.pic[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                    this.panel1.Controls.Add(this.pic[i, j]);
-                    this.pic[i, j].Click += new EventHandler(this.PicClick);
                     this.pic[i, j].Tag = new KeyValuePair<int, int>(i, j);
                     this.pic[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
+                    this.pic[i, j].Click += new EventHandler(this.PicClick);
+                    this.panel1.Controls.Add(this.pic[i, j]);
                 }
             }
         }
@@ -58,7 +64,7 @@ namespace 动物连连看
             int t, index;
             for (int i = 0; i < a.Length; i += 2)
             {
-                a[i] = rd.Next(1, 16);
+                a[i] = rd.Next(0, 20);
                 a[i + 1] = a[i];
             }
             for (int i = 1; i < a.Length; ++i)
@@ -71,9 +77,8 @@ namespace 动物连连看
                 for (int j = 0; j < MAXCOLUMN; j++)
                 {
                     this.pic[i, j].BackgroundImage = Animal.GetAnimal(a[i * MAXCOLUMN + j]);
-                    this.pic[i, j].Name = a[i * MAXCOLUMN + j].ToString();
                     this.pic[i, j].Visible = true;
-                    vis[i + 1, j + 1] = 1;
+                    vis[i + 1, j + 1] = a[i * MAXCOLUMN + j];
                 }
             }
         }
@@ -81,12 +86,12 @@ namespace 动物连连看
         {
             this.pic[firstX - 1, firstY - 1].Visible = false;
             this.pic[secondX - 1, secondY - 1].Visible = false;
-            vis[firstX, firstY] = 0;
-            vis[secondX, secondY] = 0;
+            vis[firstX, firstY] = -1;
+            vis[secondX, secondY] = -1;
             cnt++;
             if (cnt * 2 == MAXROW * MAXCOLUMN)
             {
-            //    button1.Enabled = false;
+                //    button1.Enabled = false;
                 MessageBox.Show("您赢了");
             }
             return true;
@@ -120,10 +125,37 @@ namespace 动物连连看
             }
         }
 
+        void Fresh()
+        {
+            int t, index;
+            for (int i = 0; i < MAXROW * MAXCOLUMN; ++i)
+            {
+                index = rd.Next(0, i);
+                t = vis[i / MAXCOLUMN + 1, i % MAXCOLUMN + 1];
+                vis[i / MAXCOLUMN + 1, i % MAXCOLUMN + 1] = vis[index / MAXCOLUMN + 1, index % MAXCOLUMN + 1];
+                vis[index / MAXCOLUMN + 1, index % MAXCOLUMN + 1] = t;
+            }
+            for (int i = 0; i < MAXROW * MAXCOLUMN; ++i)
+            {
+                pic[i / MAXCOLUMN, i % MAXCOLUMN].BackgroundImage = Animal.GetAnimal(vis[i / MAXCOLUMN + 1, i % MAXCOLUMN + 1]);
+                if (pic[i / MAXCOLUMN, i % MAXCOLUMN].BackgroundImage==null)
+                {
+                    pic[i / MAXCOLUMN, i % MAXCOLUMN].Visible = false;
+                }
+                else
+                {
+                    pic[i / MAXCOLUMN, i % MAXCOLUMN].Visible = true;
+                }
+            }
+        }
+        private void FreshButton_Click(object sender, EventArgs e)
+        {
+            Fresh();
+        }
+
         private Boolean Line()
         {
-            if (!this.pic[firstX - 1, firstY - 1].Visible || !this.pic[secondX - 1, secondY - 1].Visible) return false;
-            if (this.pic[firstX - 1, firstY - 1].Name != this.pic[secondX - 1, secondY - 1].Name) return false;
+            if (vis[firstX, firstY] != vis[secondX, secondY]) return false;
             if (firstX == secondX && firstY == secondY) return false;
             for (int k = 0; k < 4; ++k)
             {
@@ -132,7 +164,7 @@ namespace 动物连连看
                 {
                     tx += dx[k]; ty += dy[k];
                     if (tx == secondX && ty == secondY) return Erase();
-                    if (tx < 0 || tx > MAXROW + 1 || ty < 0 || ty > MAXCOLUMN + 1 || vis[tx, ty] == 1) break;
+                    if (tx < 0 || tx > MAXROW + 1 || ty < 0 || ty > MAXCOLUMN + 1 || vis[tx, ty] >= 0) break;
                     for (int k1 = 0; k1 < 4; ++k1)
                     {
                         int tx1 = tx, ty1 = ty;
@@ -140,7 +172,7 @@ namespace 动物连连看
                         {
                             tx1 += dx[k1]; ty1 += dy[k1];
                             if (tx1 == secondX && ty1 == secondY) return Erase();
-                            if (tx1 < 0 || tx1 > MAXROW + 1 || ty1 < 0 || ty1 > MAXCOLUMN + 1 || vis[tx1, ty1] == 1) break;
+                            if (tx1 < 0 || tx1 > MAXROW + 1 || ty1 < 0 || ty1 > MAXCOLUMN + 1 || vis[tx1, ty1] >= 0) break;
                             for (int k2 = 0; k2 < 4; ++k2)
                             {
                                 int tx2 = tx1, ty2 = ty1;
@@ -148,7 +180,7 @@ namespace 动物连连看
                                 {
                                     tx2 += dx[k2]; ty2 += dy[k2];
                                     if (tx2 == secondX && ty2 == secondY) return Erase();
-                                    if (tx2 < 0 || tx2 > MAXROW + 1 || ty2 < 0 || ty2 > MAXCOLUMN + 1 || vis[tx2, ty2] == 1) break;
+                                    if (tx2 < 0 || tx2 > MAXROW + 1 || ty2 < 0 || ty2 > MAXCOLUMN + 1 || vis[tx2, ty2] >= 0) break;
                                 }
                             }
                         }
@@ -162,7 +194,7 @@ namespace 动物连连看
             KeyValuePair<int, int> keyValuePair = (KeyValuePair<int, int>)(sender as PictureBox).Tag;
             int i=keyValuePair.Key;
             int j = keyValuePair.Value;
-            if (vis[i + 1, j + 1] == 1)
+         //   if (vis[i + 1, j + 1] >= 0)
             {
                 if (firstX == 0 && firstY == 0)
                 {
