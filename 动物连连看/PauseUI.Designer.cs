@@ -30,6 +30,8 @@
         {
             this.continueButton = new System.Windows.Forms.Button();
             this.ReturnMenuButton = new System.Windows.Forms.Button();
+            this.RestartButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // continueButton
@@ -60,15 +62,45 @@
             this.ReturnMenuButton.UseVisualStyleBackColor = false;
             this.ReturnMenuButton.Click += new System.EventHandler(this.ReturnMenuButton_Click);
             // 
-            // PauseUI
+            // RestartButton
+            // 
+            this.RestartButton.BackColor = System.Drawing.Color.Transparent;
+            this.RestartButton.FlatAppearance.BorderSize = 0;
+            this.RestartButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.RestartButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.RestartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RestartButton.Location = new System.Drawing.Point(325, 379);
+            this.RestartButton.Name = "RestartButton";
+            this.RestartButton.Size = new System.Drawing.Size(155, 38);
+            this.RestartButton.TabIndex = 5;
+            this.RestartButton.UseVisualStyleBackColor = false;
+            this.RestartButton.Click += new System.EventHandler(this.RestartButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(612, 421);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(62, 56);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // HelpButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::动物连连看.Properties.Resources.pausebg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RestartButton);
             this.Controls.Add(this.ReturnMenuButton);
             this.Controls.Add(this.continueButton);
-            this.Name = "PauseUI";
+            this.Name = "HelpButton";
             this.Size = new System.Drawing.Size(800, 600);
             this.ResumeLayout(false);
 
@@ -78,5 +110,7 @@
 
         private System.Windows.Forms.Button continueButton;
         private System.Windows.Forms.Button ReturnMenuButton;
+        private System.Windows.Forms.Button RestartButton;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -18,18 +18,27 @@ namespace 动物连连看
             this.launch = launch;
             InitializeComponent();
         }
-
         private void continueButton_Click(object sender, EventArgs e)
         {
             launch.Controls["gameUI"].BringToFront();
             launch.Controls.Remove(this);
         }
-
         private void ReturnMenuButton_Click(object sender, EventArgs e)
         {
-
             launch.Controls["launchUI"].BringToFront();
             launch.Controls.Remove(this);
+        }
+        private void RestartButton_Click(object sender, EventArgs e)
+        {
+            launch.Controls["gameUI"].BringToFront();
+            launch.gameUI.GameStart();
+            launch.Controls.Remove(this);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HelpUI helpUI = new HelpUI(launch);
+            launch.Controls.Add(helpUI);
+            helpUI.BringToFront();
         }
     }
 }

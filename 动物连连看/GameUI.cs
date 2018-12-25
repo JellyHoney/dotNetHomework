@@ -91,7 +91,6 @@ namespace 动物连连看
             cnt++;
             if (cnt * 2 == MAXROW * MAXCOLUMN)
             {
-                //    button1.Enabled = false;
                 MessageBox.Show("您赢了");
             }
             return true;
@@ -114,6 +113,8 @@ namespace 动物连连看
                     {
                         for (secondY = 1; secondY <= MAXCOLUMN; ++secondY)
                         {
+                            if (pic[firstX - 1, firstY - 1].Visible == false) continue;
+                            if (pic[secondX - 1, secondY - 1].Visible == false) continue;
                             if (Line())
                             {
                                 firstX = firstY = secondX = secondY = 0;
@@ -127,6 +128,7 @@ namespace 动物连连看
 
         void Fresh()
         {
+            this.panel1.SuspendLayout();
             int t, index;
             for (int i = 0; i < MAXROW * MAXCOLUMN; ++i)
             {
@@ -147,6 +149,7 @@ namespace 动物连连看
                     pic[i / MAXCOLUMN, i % MAXCOLUMN].Visible = true;
                 }
             }
+            this.panel1.ResumeLayout(false);
         }
         private void FreshButton_Click(object sender, EventArgs e)
         {
@@ -192,36 +195,33 @@ namespace 动物连连看
         private void PicClick(object sender, EventArgs e)
         {
             KeyValuePair<int, int> keyValuePair = (KeyValuePair<int, int>)(sender as PictureBox).Tag;
-            int i=keyValuePair.Key;
+            int i = keyValuePair.Key;
             int j = keyValuePair.Value;
-         //   if (vis[i + 1, j + 1] >= 0)
+            if (firstX == 0 && firstY == 0)
             {
-                if (firstX == 0 && firstY == 0)
+                firstX = i + 1;
+                firstY = j + 1;
+                this.pic[i, j].Image = Properties.Resources.frame;
+            }
+            else
+            {
+                secondX = i + 1;
+                secondY = j + 1;
+                this.pic[firstX - 1, firstY - 1].Image = null;
+                if(Line())
                 {
-                    firstX = i + 1;
-                    firstY = j + 1;
-                    this.pic[i, j].Image = Properties.Resources.frame;
+                    firstX = firstY = secondX = secondY = 0;
                 }
                 else
                 {
-                    secondX = i + 1;
-                    secondY = j + 1;
-                    this.pic[firstX - 1, firstY - 1].Image = null;
-                    if(Line())
-                    {
-                        firstX = firstY = secondX = secondY = 0;
-                    }
-                    else
-                    {
-                        firstX = secondX;
-                        firstY = secondY;
-                        this.pic[i, j].Image = Properties.Resources.frame;
-                    }
+                    firstX = secondX;
+                    firstY = secondY;
+                    this.pic[i, j].Image = Properties.Resources.frame;
                 }
             }
         }
         
-        private void GameStart()
+        public void GameStart()
         {
             GenPic();
             firstX = firstY = secondX = secondY = 0;

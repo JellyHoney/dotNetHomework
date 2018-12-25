@@ -13,7 +13,7 @@ namespace 动物连连看
     public partial class Launch : Form
     {
         LaunchUI launchUI;
-        GameUI gameUI;
+        public GameUI gameUI;
         public Launch()
         {   
             InitializeComponent();

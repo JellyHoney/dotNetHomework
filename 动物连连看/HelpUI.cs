@@ -25,7 +25,6 @@ namespace 动物连连看
             this.MouseDown += launch.Launch_MouseDown;
             this.MouseUp += launch.Launch_MouseUp;
         }
-
         private void rightButton_Click(object sender, EventArgs e)
         {
             if(selectedPic==1)
@@ -65,7 +64,6 @@ namespace 动物连连看
                 this.BackgroundImage = Properties.Resources.help2;
             }
         }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             launch.Controls.Remove(this);
