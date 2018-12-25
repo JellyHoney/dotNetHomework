@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="AnimationPic.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnimationPic.Designer.cs">
+      <DependentUpon>AnimationPic.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnimationPic.resx">
+      <DependentUpon>AnimationPic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameUI.resx">
       <DependentUpon>GameUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\light.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linklineh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linklines.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

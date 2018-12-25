@@ -21,6 +21,7 @@ namespace 动物连连看
         const int MAXROW = 8;
         const int MAXCOLUMN = 13;
         int[,] vis = new int[MAXROW + 2, MAXCOLUMN + 2];
+        Point[] point = new Point[4];int pnum = 0;
         int firstX, firstY, secondX, secondY;
         int cnt;
         public GameUI(Launch launch)
@@ -28,7 +29,6 @@ namespace 动物连连看
             this.launch = launch;
             InitializeComponent();
             InitPic();
-            //    GenPic();
             GameStart();
 
         }
@@ -46,13 +46,15 @@ namespace 动物连连看
             {
                 for (int j = 0; j < MAXCOLUMN; ++j)
                 {
-                    this.pic[i, j] = new PictureBox();
-                    this.pic[i, j].Location = new Point(picWidth * j, picWidth * i);
-                    this.pic[i, j].Width = picWidth;
-                    this.pic[i, j].Height = picWidth;
-                    this.pic[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                    this.pic[i, j].Tag = new KeyValuePair<int, int>(i, j);
-                    this.pic[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
+                    this.pic[i, j] = new PictureBox
+                    {
+                        Location = new Point(picWidth * j, picWidth * i),
+                        Width = picWidth,
+                        Height = picWidth,
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                        Tag = new KeyValuePair<int, int>(i, j),
+                        SizeMode = PictureBoxSizeMode.StretchImage
+                    };
                     this.pic[i, j].Click += new EventHandler(this.PicClick);
                     this.panel1.Controls.Add(this.pic[i, j]);
                 }
@@ -82,6 +84,45 @@ namespace 动物连连看
                 }
             }
         }
+        void DrawLine(Point point1,Point point2)
+        {
+            if(point1.Y==point2.Y)
+            {
+                if(point1.X>point2.X)
+                {
+                    Point tmp = point1;
+                    point1 = point2;
+                    point2 = tmp;
+                }
+                AnimationPic animation = new AnimationPic
+                {
+                    Location = new Point(point1.X - 10, point1.Y - 10),
+                    Width = point2.X - point1.X + 10,
+                    Height = 20
+                };
+                this.Controls.Add(animation);
+                animation.BringToFront();
+            }
+            else
+            {
+                if (point1.Y > point2.Y)
+                {
+                    Point tmp = point1;
+                    point1 = point2;
+                    point2 = tmp;
+                }
+                AnimationPic animation = new AnimationPic
+                {
+                    BackgroundImage = Properties.Resources.linklines,
+                    Location = new Point(point1.X - 10, point1.Y - 10),
+                    Height = point2.Y - point1.Y + 10,
+                    Width = 20
+                };
+                this.Controls.Add(animation);
+                animation.BringToFront();
+            }
+
+        }
         private Boolean Erase()
         {
             this.pic[firstX - 1, firstY - 1].Visible = false;
@@ -95,6 +136,20 @@ namespace 动物连连看
             {
                 MessageBox.Show("您赢了");
             }
+            /*
+    //    Pen pen = new Pen(Color.Red, 5);
+    //    Graphics g = this.panel1.CreateGraphics();
+
+        for(int i=0;i<pnum;++i)
+        {
+            int dx = panel1.Location.X;
+            int dy = panel1.Location.Y;
+            Point point1 = new Point( point[i].Y * picWidth - picWidth / 2+dx,point[i].X * picWidth - picWidth / 2+dy);
+            Point point2 = new Point( point[i+1].Y * picWidth - picWidth / 2+dx, point[i + 1].X * picWidth - picWidth / 2+dy);
+            //   g.DrawLine(pen, point1, point2);
+            DrawLine(point1, point2);
+
+        }*/
             return true;
         }
 
@@ -162,12 +217,16 @@ namespace 动物连连看
         {
             if (vis[firstX, firstY] != vis[secondX, secondY]) return false;
             if (firstX == secondX && firstY == secondY) return false;
+            point[0] = new Point(firstX, firstY);
+            pnum = 0;
             for (int k = 0; k < 4; ++k)
             {
                 int tx = firstX, ty = firstY;
                 for (int i = 0; i < MAXCOLUMN; ++i)
                 {
                     tx += dx[k]; ty += dy[k];
+                    pnum = 1;
+                    point[pnum] = new Point(tx, ty);
                     if (tx == secondX && ty == secondY) return Erase();
                     if (tx < 0 || tx > MAXROW + 1 || ty < 0 || ty > MAXCOLUMN + 1 || vis[tx, ty] >= 0) break;
                     for (int k1 = 0; k1 < 4; ++k1)
@@ -176,6 +235,8 @@ namespace 动物连连看
                         for (int j = 0; j < MAXCOLUMN; ++j)
                         {
                             tx1 += dx[k1]; ty1 += dy[k1];
+                            pnum = 2;
+                            point[pnum] = new Point(tx1, ty1);
                             if (tx1 == secondX && ty1 == secondY) return Erase();
                             if (tx1 < 0 || tx1 > MAXROW + 1 || ty1 < 0 || ty1 > MAXCOLUMN + 1 || vis[tx1, ty1] >= 0) break;
                             for (int k2 = 0; k2 < 4; ++k2)
@@ -184,6 +245,8 @@ namespace 动物连连看
                                 for (int l = 0; l < MAXCOLUMN; ++l)
                                 {
                                     tx2 += dx[k2]; ty2 += dy[k2];
+                                    pnum = 3;
+                                    point[pnum] = new Point(tx2, ty2);
                                     if (tx2 == secondX && ty2 == secondY) return Erase();
                                     if (tx2 < 0 || tx2 > MAXROW + 1 || ty2 < 0 || ty2 > MAXCOLUMN + 1 || vis[tx2, ty2] >= 0) break;
                                 }
@@ -222,7 +285,6 @@ namespace 动物连连看
                 }
             }
         }
-        
         public void GameStart()
         {
             GenPic();
