@@ -48,10 +48,8 @@
                     this.pic[i, j].TabStop = false;
                     this.pic[i, j].Click += new System.EventHandler(this.PicClick);
                     this.Controls.Add(this.pic[i, j]);
-
                 }
             }
-
         }
         private void InitializeComponent()
         {

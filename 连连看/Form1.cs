@@ -177,7 +177,6 @@ namespace 连连看
             }
             firstX = firstY = secondX = secondY = 0;
             cnt = 0;
-
         }
         private void 开始ToolStripMenuItem1_Click(object sender, EventArgs e)
         {

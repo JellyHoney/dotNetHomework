@@ -72,6 +72,12 @@
       <DependentUpon>LaunchUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Mouse.cs" />
+    <Compile Include="PauseUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PauseUI.Designer.cs">
+      <DependentUpon>PauseUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameUI.resx">
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LaunchUI.resx">
       <DependentUpon>LaunchUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PauseUI.resx">
+      <DependentUpon>PauseUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +144,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\animal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picboardbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pausebg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

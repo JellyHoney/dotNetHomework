@@ -83,6 +83,16 @@ namespace 动物连连看.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap gamebg {
+            get {
+                object obj = ResourceManager.GetObject("gamebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap help1 {
             get {
                 object obj = ResourceManager.GetObject("help1", resourceCulture);
@@ -126,6 +136,26 @@ namespace 动物连连看.Properties {
         internal static System.Drawing.Bitmap mouseDown {
             get {
                 object obj = ResourceManager.GetObject("mouseDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap pausebg {
+            get {
+                object obj = ResourceManager.GetObject("pausebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap picboardbg {
+            get {
+                object obj = ResourceManager.GetObject("picboardbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

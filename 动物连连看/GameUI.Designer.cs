@@ -29,22 +29,39 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(52, 25);
+            this.panel1.BackgroundImage = global::动物连连看.Properties.Resources.picboardbg;
+            this.panel1.Location = new System.Drawing.Point(88, 123);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 500);
+            this.panel1.Size = new System.Drawing.Size(624, 384);
             this.panel1.TabIndex = 0;
+            // 
+            // menuButton
+            // 
+            this.menuButton.BackColor = System.Drawing.Color.Transparent;
+            this.menuButton.FlatAppearance.BorderSize = 0;
+            this.menuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.menuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuButton.Location = new System.Drawing.Point(675, 30);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(100, 69);
+            this.menuButton.TabIndex = 2;
+            this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
             // GameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::动物连连看.Properties.Resources.bg;
+            this.BackgroundImage = global::动物连连看.Properties.Resources.gamebg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.menuButton);
             this.Controls.Add(this.panel1);
             this.Name = "GameUI";
             this.Size = new System.Drawing.Size(800, 600);
@@ -55,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button menuButton;
     }
 }

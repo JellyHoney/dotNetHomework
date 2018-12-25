@@ -40,9 +40,9 @@
             this.helpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.helpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpButton.Location = new System.Drawing.Point(346, 420);
+            this.helpButton.Location = new System.Drawing.Point(342, 416);
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(113, 28);
+            this.helpButton.Size = new System.Drawing.Size(122, 34);
             this.helpButton.TabIndex = 0;
             this.helpButton.UseVisualStyleBackColor = false;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
