@@ -37,7 +37,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::动物连连看.Properties.Resources.picboardbg;
             this.panel1.Location = new System.Drawing.Point(88, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(624, 384);
@@ -95,6 +94,7 @@
             this.Controls.Add(this.BoomButton);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "GameUI";
             this.Size = new System.Drawing.Size(800, 600);
             this.ResumeLayout(false);

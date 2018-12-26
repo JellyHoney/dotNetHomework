@@ -136,20 +136,20 @@ namespace 动物连连看
             {
                 MessageBox.Show("您赢了");
             }
-            /*
+            
     //    Pen pen = new Pen(Color.Red, 5);
     //    Graphics g = this.panel1.CreateGraphics();
 
-        for(int i=0;i<pnum;++i)
-        {
-            int dx = panel1.Location.X;
-            int dy = panel1.Location.Y;
-            Point point1 = new Point( point[i].Y * picWidth - picWidth / 2+dx,point[i].X * picWidth - picWidth / 2+dy);
-            Point point2 = new Point( point[i+1].Y * picWidth - picWidth / 2+dx, point[i + 1].X * picWidth - picWidth / 2+dy);
-            //   g.DrawLine(pen, point1, point2);
-            DrawLine(point1, point2);
+            for(int i=0;i<pnum;++i)
+            {
+                int dx = panel1.Location.X;
+                int dy = panel1.Location.Y;
+                Point point1 = new Point( point[i].Y * picWidth - picWidth / 2+dx,point[i].X * picWidth - picWidth / 2+dy);
+                Point point2 = new Point( point[i+1].Y * picWidth - picWidth / 2+dx, point[i + 1].X * picWidth - picWidth / 2+dy);
+                //   g.DrawLine(pen, point1, point2);
+                DrawLine(point1, point2);
 
-        }*/
+            }
             return true;
         }
 
