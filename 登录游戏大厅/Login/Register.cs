@@ -31,7 +31,6 @@ namespace 登录游戏大厅
             }
             return 0;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string userName = richTextBox1.Text;
@@ -41,7 +40,6 @@ namespace 登录游戏大厅
             {
                 SqlClass.NonQuery("insert into account(userName,password) values('" + userName + "','" + Encrypt.MD5Encrypt32(password) + "')");
             }
-            
         }
     }
 }

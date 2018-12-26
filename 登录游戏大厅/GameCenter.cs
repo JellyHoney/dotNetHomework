@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace 登录游戏大厅
 {
@@ -18,6 +19,33 @@ namespace 登录游戏大厅
 
         Boolean mouseHold = false;
         int mouseX, mouseY, FramX, FramY;
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
+        private void pictureBoxMouseEnter(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            pictureBox.Height += 15;
+            pictureBox.Width += 15;
+        }
+        private void pictureBoxMouseLeave(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            pictureBox.Height -= 15;
+            pictureBox.Width -= 15;
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"D:\大学\dotNet\homework\打地鼠\bin\Debug\打地鼠.exe");
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            Process.Start(@"D:\大学\dotNet\homework\动物连连看\bin\Debug\动物连连看.exe");
+        }
         private void GameCenter_MouseDown(object sender, MouseEventArgs e)
         {
             mouseHold = true;
