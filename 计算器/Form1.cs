@@ -67,6 +67,15 @@ namespace 计算器
             }
             if(op=='/')
             {
+                int res;
+                try
+                {
+                    res = a / b;
+                }
+                catch(Exception)
+                {
+                    return 999999999;
+                }
                 return a/b;
             }
             return 0;
