@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第二章编程题1", "第�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "搏饼", "搏饼\搏饼.csproj", "{06A49912-83EE-4CC3-BB96-E057CA380E2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "连连看", "连连看\连连看.csproj", "{34A1D926-5F2C-4E7B-A14F-327D452F7108}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第二章编程题6", "第二章编程题6\第二章编程题6.csproj", "{43557463-B3CC-4A2D-AA84-C0B5C1CD3137}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "猜数字", "猜数字\猜数字.csproj", "{47F966F4-A18D-487D-8CC9-1AD5442721E5}"
@@ -67,12 +65,6 @@ Global
 		{06A49912-83EE-4CC3-BB96-E057CA380E2D}.Release|Any CPU.ActiveCfg = Release|x86
 		{06A49912-83EE-4CC3-BB96-E057CA380E2D}.Release|x86.ActiveCfg = Release|x86
 		{06A49912-83EE-4CC3-BB96-E057CA380E2D}.Release|x86.Build.0 = Release|x86
-		{34A1D926-5F2C-4E7B-A14F-327D452F7108}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{34A1D926-5F2C-4E7B-A14F-327D452F7108}.Debug|x86.ActiveCfg = Debug|x86
-		{34A1D926-5F2C-4E7B-A14F-327D452F7108}.Debug|x86.Build.0 = Debug|x86
-		{34A1D926-5F2C-4E7B-A14F-327D452F7108}.Release|Any CPU.ActiveCfg = Release|x86
-		{34A1D926-5F2C-4E7B-A14F-327D452F7108}.Release|x86.ActiveCfg = Release|x86
-		{34A1D926-5F2C-4E7B-A14F-327D452F7108}.Release|x86.Build.0 = Release|x86
 		{43557463-B3CC-4A2D-AA84-C0B5C1CD3137}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{43557463-B3CC-4A2D-AA84-C0B5C1CD3137}.Debug|x86.ActiveCfg = Debug|x86
 		{43557463-B3CC-4A2D-AA84-C0B5C1CD3137}.Debug|x86.Build.0 = Debug|x86
